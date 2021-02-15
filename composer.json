@@ -1,7 +1,7 @@
 {
     "name": "exler/simple-php-whois",
     "type": "library",
-    "description": "Simple PHP library for looking up domain information",
+    "description": "Simple PHP library for performing WHOIS lookups and viewing domain information",
     "keywords": [
         "whois",
         "domain",

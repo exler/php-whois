@@ -38,7 +38,14 @@ class Whois
      */
     public function isAvailable(string $domain): bool
     {
-        return false;
+        $info = $this->lookup($domain);
+        $unavailable_strings = Config::load("unavailable_strings");
+
+        foreach ($unavailable_strings as $str) {
+            if (stripos($info, $str))
+                return false;
+        }
+        return true;
     }
 
     /** 

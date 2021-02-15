@@ -4,6 +4,8 @@ namespace Exler\Whois;
 
 use PHPUnit\Framework\TestCase;
 
+use Exler\Whois\Exceptions\ParseException;
+
 class WhoisTest extends TestCase
 {
     private static $whois;
@@ -29,5 +31,20 @@ class WhoisTest extends TestCase
 
         $r = self::$whois->isAvailable("nowouldwouldeverbuyawebsitewiththatname.com");
         $this->assertTrue($r);
+    }
+
+    public function testExceptionOnNoTLD()
+    {
+        $this->expectException(ParseException::class);
+        self::$whois->getTLD("example");
+    }
+
+    public function testGetCorrectTLD()
+    {
+        $r = self::$whois->getTLD("example.com");
+        $this->assertEquals(".com", $r);
+
+        $r = self::$whois->getTLD("john.doe.io");
+        $this->assertEquals(".io", $r);
     }
 }

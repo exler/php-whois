@@ -5,5 +5,15 @@
     ".io": { "host": "whois.nic.io" },
     ".co": { "host": "whois.nic.co" },
     ".pl": { "host": "whois.dns.pl" },
-    ".de": { "host": "whois.denic.de" }
+    ".de": { "host": "whois.denic.de" },
+    ".hu": { "host": "whois.nic.hu" },
+    ".ac": { "host": "whois.nic.ac" },
+    ".ai": { "host": "whois.nic.ai " },
+    ".cc": { "host": "ccwhois.verisign-grs.com" },
+    ".ch": { "host": "whois.nic.ch" },
+    ".me": { "host": "whois.nic.me" },
+    ".xyz": { "host": "whois.nic.xyz" },
+    ".work": { "host": "whois.nic.work" },
+    ".tech": { "host": "whois.nic.tech" },
+    ".business": { "host": "whois.nic.business" }
 }
